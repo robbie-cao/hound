@@ -1,0 +1,1 @@
+#include <stdio.h>#include <stdlib.h>#include <stdint.h>uint32_t fib(uint32_t n){    if (n == 0 || n == 1) {        return 1;    }    return fib(n - 1) + fib(n - 2);}int main(int argc, char *argv[]){    int n = 0;    if (argc != 2) {        printf("%s <n>\n", argv[0]);    }    n = atoi(argv[1]);    printf("Fib(%d) = %d\n", n, fib(n));    return 0;}
